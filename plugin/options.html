@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Options</title>
+<script>
+	function save() {
+		var prefs = JSON.parse(localStorage.prefs);
+		prefs.new_tab = document.getElementById("newtabcheck").checked;
+	//	prefs.check_404 = document.getElementById("urlcheck").checked;	
+		localStorage.prefs = JSON.stringify(prefs);
+	}
+
+	window.onload = function() {
+		var prefs = JSON.parse(localStorage.prefs);
+		document.getElementById("newtabcheck").checked = prefs.new_tab;
+	//	document.getElementById("urlcheck").checked = prefs.check_404;	
+	}
+</script>
+</head>
+<body>
+<center> 
+<table width="96%" height="96%">
+<tr>
+<td align="center" valign="top">
+<h2>Random Web Page</h2>
+<h1>Options</h1>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<p><input id="newtabcheck" type="checkbox" onclick="save()"> Open new tab.</p>
+<!-- <p><input id="urlcheck" type="checkbox" onclick="save()"> Do not show 404 and 403 pages.</p> -->
+</td>
+</tr> 
+<tr><td align="center" valign="bottom"> 
+<font size="-1">
+<p>© 2011 <a href="mailto:kryukov@frtk.ru"><font size="-1">Pavel Kryukov</font></a>.</p>
+</font></td></tr> 
+</table> 
+</body>
+</html>

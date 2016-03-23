@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript" src="randUrl.js"></script>
+<script type="text/javascript">		
+	if ( !localStorage.prefs) 
+	{
+		localStorage.prefs = JSON.stringify(
+			{ 
+				"new_tab": true, 
+			}
+		);
+	}
+	
+	function broadcast( val)
+	{
+		chrome.browserAction.setBadgeText({text: val + ''});
+	}
+	
+	chrome.browserAction.onClicked.addListener( function( tab)
+	{
+		var prefs = JSON.parse( localStorage.prefs)	
+		broadcast( 'gen');	
+		var address = getRandomUrl( false);
+		broadcast( 'load');		
+        if ( prefs.new_tab)
+		{
+			chrome.tabs.create( {url: address});
+		}
+		else
+		{
+			chrome.tabs.update( tab.id, {url: address});
+		}
+		broadcast( '');		
+	}
+	);
+</script>
+</head>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Error</title>
+</head>
+<body>
+<table width="96%" height="96%">
+<tr>
+<td align="center" valign="top">
+<h2>Random Web Page</h2>
+<h1>Error</h1>
+</td>
+</tr>
+<tr> 
+<td align="center" valign="top">
+<p>
+<script type="text/javascript">
+	var qstr = location.search.replace( /\?/, "&");
+	var text = qstr.substr( qstr.indexOf('=') + 1); 
+	switch ( text)
+	{
+		case "noxml": document.write( "Couldn't connect to bit.ly API. Check your connection to Internet and try again"); break;
+		case "invalidrequest": document.write( "Invalid request to bit.ly API. Try again"); break;
+		case "invalidxml": document.write( "Invalid XML data from bit.ly API. Try again."); break;
+		default: document.write( "Unknown error");
+	}
+</script>
+</p>
+</td>
+</tr> 
+<tr><td align="center" valign="bottom"> 
+<font size="-1">
+<p>© 2011 <a href="mailto:kryukov@frtk.ru"><font size="-1">Pavel Kryukov</font></a>.</p>
+</font></td></tr> 
+</table> 
+</body>
+</html>

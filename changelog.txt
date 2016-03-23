@@ -1,0 +1,53 @@
+Random Web Page Changelog.
+
+1.2.5.2
+	* First char in 6-symbol hash can't be greater than "z".
+
+1.2.5.1
+	* First char in 6-symbol hash can't be greater than "r".
+
+1.2.5
+    * Icon was changed.
+
+1.2.4.1
+    * Range of bit.ly hashes was increased.
+
+1.2.4 
+	
+	* Option «Progress info» was removed.
+	* Minimalistic design of Options and Errors.
+	* Code style in randUrl.js
+
+1.2.3
+
+	* Code style in randUrl.js.
+	* First char in 6-symbol hash can't be greater than "m".
+	* New error window with full info.
+	
+1.2
+	
+	* «Open new tab» option.
+	* Progress info.
+	
+1.1.4
+	
+	* Random function improvement.
+	* Little description edit.
+
+1.1.3
+
+	* Permissions aren't required at all.
+	* Icon 128x128 was added.
+
+1.1.2
+	
+	* Permission to tabs isn't required.
+
+1.1.1
+
+	* Permission to http://*/* isn't required.
+
+1.0
+
+	* Plugin introduced.
+
